@@ -59,8 +59,151 @@
 					</ul>
 				</section>
 
+				<section>
+					<section id="getting-started">
+						<h1>Getting Started</h1>
+					</section>
+					<section id="osx">
+						<h2>OS X</h2>
+						<p>Open <code>/Applications/Utilities/Terminal</code></p>
+						<p class="fragment">Keep in Dock for easy access.</p>
+						<p class="fragment">Optionally, download and use <a href="http://www.iterm2.com/#/section/home">iTerm 2</a></p>
+					</section>
+					<section id="unix">
+						<h2>Unix</h2>
+						<p>Search applications for Terminal</p>
+						<p class="fragment">Keep in Launcher, if you have one, for easy access</p>
+					</section>
+					<section id="windows">
+						<h2>Windows</h2>
+						<p>Download <a href="http://sourceforge.net/projects/console/files/">Console 2</a></p>
+						<p class="fragment">Extract <code>Console.exe</code></p>
+						<p class="fragment">Add <code>Console.exe</code> shortcut to Desktop</p>
+						<p class="fragment">Open <code>Console.exe</code>, go to <code>Edit->Settings</code> and set the shell to PowerShell (<code>C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe)</code></p>
+						<p class="fragment">Set the Startup dir to your User directory</p>
+						<p class="fragment">Restart <code>Console.exe</code></p>
+					</section>
+				</section>
 
+				<section>
+					<section id="help">
+						<h1>Getting Help</h1>
+					</section>
+					<section id="man">
+						<h2>Manual</h2>
+						<p><code class="bash">man {command}</code>: Opens manual page for command. Move up/down with arrow keys, press <code class="base">q</code> to quit</p>
+						<img src="images/man.png" alt="Manual" class="fragment">
+					</section>
+				</section>
 
+				<section>
+					<section id="listing">
+						<h1>Looking Around</h1>
+					</section>
+					<section id="ls">
+						<h2>Listing What's Visible</h2>
+						<p><code class="bash">ls</code>: List all non-hidden files/folders</p>
+						<img src="images/ls.png" alt="List Visible" class="fragment">
+					</section>
+					<section id="ls-a">
+						<h2>Listing Everything</h2>
+						<p><code class="bash">ls -a</code>: List all files/folders</p>
+						<img src="images/ls-a.png" alt="List All" class="fragment">
+					</section>
+					<section id="ls-l">
+						<h2>Listing With Details</h2>
+						<p><code class="bash">ls -l</code>: Details list of available files/folders</p>
+						<p class="fragment">Can be combined with <code class="bash">-a</code></p>
+						<img src="images/ls-l.png" alt="List with Details" class="fragment">
+					</section>
+				</section>
+
+				<section>
+					<section id="moving">
+						<h1>Moving Around</h1>
+					</section>
+					<section id="cd">
+						<h2>Changing Directory</h2>
+						<p><code class="bash">cd</code>: Changes directory to entered directory (case sensitive)</p>
+						<p class="fragment">Folders with spaces in name need to escape space: <code>foo\ bar</code></p>
+						<img src="images/cd.png" alt="Change Directory" class="fragment">
+					</section>
+					<section id="cd-back">
+						<h2>Current Directory</h2>
+						<p><code class="bash">.</code>: Starts at the current directory</p>
+						<img src="images/cd-here.png" alt="Start Here" class="fragment">
+					</section>
+					<section id="cd-back">
+						<h2>Moving Backward</h2>
+						<p><code class="bash">..</code>: Steps back a directory </p>
+						<img src="images/cd-back.png" alt="Move Backward" class="fragment">
+					</section>
+					<section id="cd-home">
+						<h2>User Directory</h2>
+						<p><code class="bash">~</code>: Start at your user directory</p>
+						<img src="images/cd-home.png" alt="Start at User Directory" class="fragment">
+					</section>
+				</section>
+
+				<section>
+					<section id="files-folders">
+						<h1>Files and Folders</h1>
+					</section>
+					<section id="creating-folders">
+						<h2>Creating Folders</h2>
+						<p><code class="bash">mkdir</code>: Makes a folder.</p>
+						<p class="fragment">Folders with spaces in name need to escape space: <code>foo\ bar</code></p>
+						<img src="images/mkdir.png" alt="Make Directory" class="fragment">
+					</section>
+					<section id="removing-empty-folders">
+						<h2>Removing Empty Folders</h2>
+						<p><code class="bash">rmdir</code>: Removes an empty directory</p>
+						<img src="images/rmdir.png" alt="Remove Directory" class="fragment">
+					</section>
+					<section id="creating-files">
+						<h2>Creating Files</h2>
+						<p><code class="bash">touch</code>: Will check to see if a file exists and, if it doesn't, create it</p>
+						<img src="images/touch.png" alt="Touch" class="fragment">
+					</section>
+					<section id="writing-to-files">
+						<h2>Writing To Files</h2>
+						<p><code class="bash">echo "{content}" ></code>: Will write content to a file</p>
+						<img src="images/echo-1.png" alt="" class="fragment">
+						<img src="images/echo-2.png" alt="" class="fragment">
+						<img src="images/echo-3.png" alt="" class="fragment">
+					</section>
+					<section id="removing-files">
+						<h2>Removing Files</h2>
+						<p><code class="bash">rm</code>: Deletes file (does not move to trash, cannot undo)</p>
+						<img src="images/rm.png" alt="Remove" class="fragment">
+					</section>
+					<section id="removing-full-folders">
+						<h2>Removing Full Folders</h2>
+						<p><code class="bash">rm -r</code>: Deletes a not-empty directory (does not move to trash, cannot undo)</p>
+						<img src="images/rm-r.png" alt="Recursively Remove" class="fragment">
+					</section>
+				</section>
+
+				<section>
+					<section id="searching">
+						<h1>Searching</h1>
+					</section>
+					<section id="find-file-folder">
+						<h2>Finding Files and Folders</h2>
+						<p><code class="bash">find</code>: Finds files and folders. Use <code class="bash">-type</code> for specific types and <code class="bash">-name</code> for the name of files</p>
+						<img src="images/find.png" alt="Find" class="fragment">
+					</section>
+					<section id="find-content">
+						<h2>Finding Content</h2>
+						<p><code class="bash">grep</code>: Find content inside of files. Use <code class="bash">-n</code> for line numbers, <code class="bash">-r</code> to search recursively</p>
+						<img src="images/grep.png" alt="Grep" class="fragment">
+					</section>
+					<section id="piping">
+						<h2>Combining Searches</h2>
+						<p><code class="bash">|</code>: Pipe. Generic way of passing the results from one command to another</p>
+						<img src="images/pipe.png" alt="Piping" class="fragment">
+					</section>
+				</section>
 
 
 
