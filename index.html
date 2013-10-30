@@ -123,6 +123,11 @@
 					<section id="moving">
 						<h1>Moving Around</h1>
 					</section>
+          <section id="pwd">
+            <h2>Current Path</h2>
+            <p><code class="bash">pwd</code>: Displays your current path.</p>
+            <img src="images/pwd.png" alt="Display Current Path" class="fragment">
+          </section>
 					<section id="cd">
 						<h2>Changing Directory</h2>
 						<p><code class="bash">cd</code>: Changes directory to entered directory (case sensitive)</p>
@@ -152,18 +157,18 @@
 					</section>
 					<section id="creating-folders">
 						<h2>Creating Folders</h2>
-						<p><code class="bash">mkdir</code>: Makes a folder.</p>
+						<p><code class="bash">mkdir {folder-name}</code>: Makes a folder.</p>
 						<p class="fragment">Folders with spaces in name need to escape space: <code>foo\ bar</code></p>
 						<img src="images/mkdir.png" alt="Make Directory" class="fragment">
 					</section>
 					<section id="removing-empty-folders">
 						<h2>Removing Empty Folders</h2>
-						<p><code class="bash">rmdir</code>: Removes an empty directory</p>
+						<p><code class="bash">rmdir {folder-name}</code>: Removes an empty directory</p>
 						<img src="images/rmdir.png" alt="Remove Directory" class="fragment">
 					</section>
 					<section id="creating-files">
 						<h2>Creating Files</h2>
-						<p><code class="bash">touch</code>: Will check to see if a file exists and, if it doesn't, create it</p>
+						<p><code class="bash">touch {file-name}</code> (Windows: <code class="bash">New-Item {file-name} -type file</code>: Will check to see if a file exists and, if it doesn't, create it</p>
 						<img src="images/touch.png" alt="Touch" class="fragment">
 					</section>
 					<section id="reading-writing-to-files">
@@ -187,6 +192,16 @@
 						<p><code class="bash">rm -r</code>: Deletes a not-empty directory (does not move to trash, cannot undo)</p>
 						<img src="images/rm-r.png" alt="Recursively Remove" class="fragment">
 					</section>
+          <section id="opening-files-folders">
+            <h2>Opening Files and Folders</h2>
+            <ul>
+              <li>OS X: <code class="bash">open {file-or-folder}</code></li>
+              <li>Linux: <code class="bash">nautilus {file-or-folder}</code></li>
+              <li>Windows: <code class="bash">ii {file-or-folder}</code></li>
+            </ul>
+            <p>Opens a file or folder. Opening <code class="bash">.</code> will open the current directory</p>
+            <img src="images/open.png" alt="Open" class="fragment">
+          </section>
 				</section>
 
 				<section>
@@ -195,12 +210,13 @@
 					</section>
 					<section id="find-file-folder">
 						<h2>Finding Files and Folders</h2>
-						<p><code class="bash">find</code>: Finds files and folders. Use <code class="bash">-type</code> for specific types and <code class="bash">-name</code> for the name of files</p>
+						<p><code class="bash">find {file-name}</code> (Windows: <code class="bash">Get-ChildItem {file-name}</code>: Finds files and folders. Use <code class="bash">-type</code> for specific types and <code class="bash">-name</code> for the name of files on non-Windows systems.</p>
 						<img src="images/find.png" alt="Find" class="fragment">
 					</section>
 					<section id="find-content">
 						<h2>Finding Content</h2>
-						<p><code class="bash">grep</code>: Find content inside of files. Use <code class="bash">-n</code> for line numbers, <code class="bash">-r</code> to search recursively</p>
+						<p><code class="bash">grep "{search-term}"</code> (Windows: select-string .\*.* -pattern "{search-term}": Find content inside of files. Use <code class="bash">-n</code> for line numbers, <code class="bash">-r</code> to search recursively</p>
+            <p>clear</p>
 						<img src="images/grep.png" alt="Grep" class="fragment">
 					</section>
 					<section id="piping">
